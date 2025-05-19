@@ -1,13 +1,12 @@
 # Convertisseur d’unités en C
 
-Ce projet implémente un convertisseur d’unités en ligne de commande écrit en langage C. Il permet de convertir des longueurs, des masses et des températures entre différentes unités.
+Ce projet implémente un convertisseur d’unités en ligne de commande écrit en langage C. Il permet de convertir des longueurs, des masses 
 
 ## Fonctionnalités
 
-- Conversion de longueurs : mètres (m), kilomètres (km), miles (mi), pieds (ft).  
-- Conversion de masses : grammes (g), kilogrammes (kg), livres (lb), onces (oz).  
-- Conversion de températures : degrés Celsius (C), Fahrenheit (F), Kelvin (K).  
-- Vérification des arguments et gestion des erreurs pour les unités inconnues.
+- Conversion de longueurs : mètres (m), kilomètres (km)
+- Conversion de masses : grammes (g), kilogrammes (kg)  
+
 
 ## Prérequis
 
