@@ -45,3 +45,23 @@ double converter_length(double v, const char *from, const char *to)
     m = to_meters(v,from);
     return from_meters(m,to);
 }
+
+int main(int argc, char *argv[])
+{
+    if (argc != 4)
+    {
+        fprintf(stderr,"Usage : %s <valeur> <unité_source> <unité_cible>\n", argv[0] );
+        return EXIT_FAILURE;
+    }
+    
+    double val = atof(argv[1]);
+    const char *unite1 = argv[2];
+    const char *unite2 = argv[3];
+    double res = 0.;
+    if (strcmp(unite1,"m") == 0 || strcmp(unite1,"km") == 0)
+    {
+        res = converter_length(val,unite1,unite2);
+    }
+    printf("%g %s = %g %s\n", val, unite1, res, unite2);
+    
+}
