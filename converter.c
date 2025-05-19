@@ -16,3 +16,24 @@ double from_meters(double value, const char *unite)
 
 }
 
+double to_meters(double v, const char *u)
+{
+    /*convertit la valeur v en un autre systeme d'unites (les metres)*/
+
+    if (strcmp(u,"m") == 0)
+    {
+        return v; // on a deja des metres
+
+    }
+    else if (strcmp(u,"km") == 0)
+    {
+        return v * 1000.;
+    }
+    else 
+    {
+        fprintf(stderr, "unites de longueur inconnue : %s\n",u);
+    }
+
+
+}
+
