@@ -88,7 +88,7 @@ double from_grams(double v, const char *u)
     }
     else 
     {
-        fprintf(stderr, "unites de longueur inconnue : %s\n",unite);
+        fprintf(stderr, "unites de longueur inconnue : %s\n",u);
         return EXIT_FAILURE;
     }
 
