@@ -74,6 +74,27 @@ double to_grams(double v, const char *u)
 
 }
 
+double from_grams(double v, const char *u)
+{
+    /*on part du gramme vers un autre systeme de mesure*/
+
+    if (strcmp(u,"m") == 0)
+    {
+        return v;
+    }
+    else if (strcmp(u,"kg") == 0)
+    {
+        return v / 1000.;
+    }
+    else 
+    {
+        fprintf(stderr, "unites de longueur inconnue : %s\n",unite);
+        return EXIT_FAILURE;
+    }
+
+
+}
+
 int main(int argc, char *argv[])
 {
     if (argc != 4)

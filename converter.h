@@ -11,6 +11,6 @@ double to_meters(double v, const char *u);
 double converter_length(double v, const char *from, const char *to);
 
 double to_grams(double v, const char *u);
-
+double from_grams(double v, const char *u);
 
 # endif /*CONVERTER_H*/
