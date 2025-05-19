@@ -12,7 +12,11 @@ double from_meters(double value, const char *unite)
     {
         return value / 1000.;
     }
-    
+    else 
+    {
+        fprintf(stderr, "unites de longueur inconnue : %s\n",unite);
+        return EXIT_FAILURE;
+    }
 
 }
 
@@ -32,6 +36,7 @@ double to_meters(double v, const char *u)
     else 
     {
         fprintf(stderr, "unites de longueur inconnue : %s\n",u);
+        return EXIT_FAILURE;
     }
 
 
