@@ -37,3 +37,11 @@ double to_meters(double v, const char *u)
 
 }
 
+double converter_length(double v, const char *from, const char *to)
+{
+    /* convertir une longueur d'un systeme d'unites vers un autre*/
+
+    double m = 0;
+    m = to_meters(v,from);
+    return from_meters(m,to);
+}
