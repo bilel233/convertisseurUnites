@@ -78,7 +78,7 @@ double from_grams(double v, const char *u)
 {
     /*on part du gramme vers un autre systeme de mesure*/
 
-    if (strcmp(u,"m") == 0)
+    if (strcmp(u,"g") == 0)
     {
         return v;
     }
@@ -93,6 +93,15 @@ double from_grams(double v, const char *u)
     }
 
 
+
+}
+
+double convert_mass(double v, const char *from, const char *to)
+{
+    /*on convertit la masse dans n'importe quelle systemes d'unites*/
+
+    double gramme = to_grams(v, from);
+    return from_grams(gramme, to);
 }
 
 int main(int argc, char *argv[])
@@ -110,6 +119,10 @@ int main(int argc, char *argv[])
     if (strcmp(unite1,"m") == 0 || strcmp(unite1,"km") == 0)
     {
         res = converter_length(val,unite1,unite2);
+    }
+    if (strcmp(unite1,"g") == 0 || strcmp(unite1,"kg") == 0)
+    {
+        res = convert_mass(val,unite1,unite2);
     }
     printf("%g %s = %g %s\n", val, unite1, res, unite2);
     

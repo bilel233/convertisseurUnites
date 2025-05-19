@@ -12,5 +12,6 @@ double converter_length(double v, const char *from, const char *to);
 
 double to_grams(double v, const char *u);
 double from_grams(double v, const char *u);
+double convert_mass(double v, const char *from, const char *to);
 
 # endif /*CONVERTER_H*/
