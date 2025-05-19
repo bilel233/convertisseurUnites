@@ -51,6 +51,29 @@ double converter_length(double v, const char *from, const char *to)
     return from_meters(m,to);
 }
 
+
+double to_grams(double v, const char *u)
+{
+    /* convertit une valeur dans son SI en grammes*/
+
+    if (strcmp(u,"g") == 0)
+    {
+        return v;
+
+    }
+    else if (strcmp(u,"kg") == 0)
+    {
+        return v * 1000.;
+    }
+    else 
+    {
+        fprintf(stderr, "unites de longueur inconnue : %s\n",u);
+        return EXIT_FAILURE;
+    }
+
+
+}
+
 int main(int argc, char *argv[])
 {
     if (argc != 4)
